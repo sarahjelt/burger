@@ -1,0 +1,18 @@
+<h1>EAT THE BURGER</h1>
+
+<h3>you know you want to</h3>
+
+<div>
+  {{#each burger}}
+    <p>{{this.id}}. {{this.burger_name}}</p>
+    <br>
+  {{/each}}
+</div>
+
+<!-- button that will submit user input into database -->
+<form class="create">
+  <label for="new">add a new burger</label>
+  <br>
+  <textarea class="nameo" type="text" name="burger"></textarea>
+  <button type="submit">Make a Burger!</button>
+</form>
