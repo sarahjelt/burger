@@ -2,17 +2,30 @@
 
 <h3>you know you want to</h3>
 
-<div>
+<div class="one">
+  <p>yet to be eaten</p>
   {{#each burger}}
-    <p>{{this.id}}. {{this.burger_name}}</p>
-    <br>
+    {{#unless devoured}}
+      {{> burgers/burgers-block devourable=true}}
+    {{/unless}}
   {{/each}}
 </div>
 
+<div class="two">
+  <p>you've tried:</p>
+  {{#each burger}}
+    {{#if devoured}}
+      {{> burgers/burgers-block2 devourable=false}}
+    {{/if}}
+  {{/each}}
+</div>
+
+<div class="clearfix"></div>
 <!-- button that will submit user input into database -->
 <form class="create">
   <label for="new">add a new burger</label>
   <br>
-  <textarea class="nameo" type="text" name="burger"></textarea>
+  <input class="nameo" type="text" name="burger"></input>
+  <div class="clearfix"></div>
   <button type="submit">Make a Burger!</button>
 </form>

@@ -12,19 +12,11 @@ var burger = {
       cb(results);
     })
   },
-  updateOne: function() {
-
+  updateOne: function(objColVals, condition, cb) {
+    orm.updateOne("burgers", objColVals, condition, function(results) {
+      cb(results);
+    })
   }
 };
-
-
-// orm.insertOne() {
-//   console.log(data);
-
-// }
-
-// orm.updateOne() {
-//   console.log(data);
-// }
 
 module.exports = burger;
