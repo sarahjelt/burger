@@ -2,7 +2,7 @@ var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 
-var port = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -18,7 +18,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
 // lets users input names of burgers they'd like to eat
 //submit burger name, displays burger on left side of page -- WAITING TO BE DEVOURED
