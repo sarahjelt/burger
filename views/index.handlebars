@@ -1,9 +1,13 @@
 <h1>EAT THE BURGER</h1>
 
+<div class="image">
+<img src="../public/assets/img/krabby-patty.png" alt="krabby patty">
+</div>
+
 <h3>you know you want to</h3>
 
 <div class="one">
-  <p>yet to be eaten</p>
+  <h4>yet to be eaten</h4>
   {{#each burger}}
     {{#unless devoured}}
       {{> burgers/burgers-block devourable=true}}
@@ -12,7 +16,7 @@
 </div>
 
 <div class="two">
-  <p>you've tried:</p>
+  <h4>you've tried:</h4>
   {{#each burger}}
     {{#if devoured}}
       {{> burgers/burgers-block2 devourable=false}}
